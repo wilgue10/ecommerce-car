@@ -1,0 +1,529 @@
+/*************** rows/colums ***************/
+
+.td-flex {
+  display: flex;
+}
+
+//no matter the screen size, always in row
+.td-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.td-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+//Will turn into column if width less than 800px
+.td-row-800 {
+  display: flex;
+  flex-direction: row;
+}
+
+//Will turn into column if width less than 480px
+.td-row-480 {
+  display: flex;
+  flex-direction: row;
+}
+
+.td-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.td-cell-05 {
+  flex: 0.05;
+}
+
+.td-cell-12 {
+  flex: 0.12;
+}
+
+.td-cell-10 {
+  flex: 0.1;
+}
+
+.td-cell-20 {
+  flex: 0.2;
+}
+
+.td-cell-25 {
+  flex: 0.25;
+}
+
+//Don't change size in mobile
+.td-cell-25-alt {
+  flex: 0.25;
+}
+
+.td-cell-33 {
+  flex: 0.3333333;
+}
+
+.td-cell-60 {
+  flex: 0.6;
+}
+
+.td-cell-40 {
+  flex: 0.4;
+}
+
+.td-cell-70 {
+  flex: 0.7;
+}
+
+.td-cell-30 {
+  flex: 0.30;
+}
+
+.td-cell-50 {
+  flex: 0.5;
+}
+
+.td-cell-75 {
+  flex: 0.75;
+}
+
+.td-cell-80 {
+  flex: 0.80;
+}
+
+.td-cell-20 {
+  flex: 0.20;
+}
+
+.td-cell-95 {
+  flex: 0.95;
+}
+
+.td-cell-75-alt {
+  flex: 0.75;
+}
+
+.td-cell-100 {
+  flex: 100%;
+}
+
+//This cell takes the remaining space
+.td-cell-full {
+  flex: 1;
+}
+
+@media (max-width: 1199px) {
+
+  //>1200px desktop large
+  //replaced max-width 1024; bc of admin console, it works better with this breakpoint of 1124
+  .td-row-800,
+  //this will not apply on td-row-480, we need to respect in td-row-800 the size defined per default
+  .td-row {
+    .td-cell-12 {
+      flex: 0.25;
+    }
+
+    .td-cell-10 {
+      flex: 0.25;
+    }
+
+    .td-cell-20 {
+      flex: 0.5;
+    }
+
+    .td-cell-25,
+    .td-cell-33 {
+      flex: 0.5;
+    }
+
+    .td-cell-50,
+    .td-cell-75,
+    .td-cell-full {
+      flex: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .td-row-800 {
+    flex-direction: column;
+  }
+
+  .show-on-800 {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .td-cell-12,
+  .td-cell-10,
+  .td-cell-20,
+  .td-cell-25,
+  .td-cell-33,
+  .td-cell-50,
+  .td-cell-75,
+  .td-cell-full {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .td-row-480 {
+    flex-direction: column;
+  }
+
+  .td-center-on-mobile {
+    text-align: center;
+  }
+
+  .hidden-on-mobile {
+    display: none;
+  }
+
+  .show-on-480 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .hidden-on-mobile {
+    display: block;
+  }
+
+  .show-on-480 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .show-on-800 {
+    display: none;
+  }
+}
+
+/*************** flex utility class ***************/
+.td-flex-item-100 {
+  flex: 100%;
+}
+
+.td-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.td-justify-content-start {
+  justify-content: start;
+}
+
+.td-justify-content-center {
+  justify-content: center;
+}
+
+.td-justify-content-between {
+  justify-content: space-between;
+}
+
+.td-justify-content-end {
+  justify-content: end;
+}
+
+.td-justify-content-end-responsive-center {
+  justify-content: end;
+}
+
+.td-align-items-center {
+  align-items: center;
+}
+
+.td-align-items-start {
+  align-items: flex-start;
+}
+
+.td-align-items-end {
+  align-items: flex-end;
+}
+
+/** margins & size **/
+.full-width {
+  width: 100%;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+//will change size in mobile to 5px
+.gap-30-responsive-5 {
+  gap: 15px;
+}
+
+//will change size in mobile to 10px
+.gap-15-responsive-10 {
+  gap: 15px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+//will change size in mobile to 10px
+.gap-30-responsive-10 {
+  gap: 30px;
+}
+
+.gap-45 {
+  gap: 45px;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+//PADDING by side 15px
+.td-padding-l-15px {
+  padding-left: 15px;
+}
+
+.td-padding-r-15px {
+  padding-right: 15px;
+}
+
+.td-padding-t-15px {
+  padding-top: 15px;
+}
+
+.td-padding-b-15px {
+  padding-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.td-flex-wrap-800 {
+  flex-wrap: nowrap;
+}
+
+.td-flex-wrap-1200 {
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 480px) {
+
+  .gap-30-responsive-10,
+  .gap-15-responsive-10 {
+    gap: 10px;
+  }
+
+  .gap-30-responsive-5 {
+    gap: 5px;
+  }
+
+  .td-justify-content-end-responsive-center {
+    justify-content: center;
+  }
+
+  .td-align-items-start-480 {
+    align-items: flex-start;
+  }
+
+  .td-align-items-center-480 {
+    align-items: center;
+  }
+
+  .td-align-items-end-480 {
+    align-items: flex-end;
+  }
+
+  .td-justify-content-start-480 {
+    justify-content: start;
+  }
+
+  .td-justify-content-center-480 {
+    justify-content: center;
+  }
+
+  .td-justify-content-between-480 {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 800px) {
+  .td-flex-wrap-800 {
+    flex-wrap: wrap;
+  }
+
+  .td-align-items-start-800 {
+    align-items: flex-start;
+  }
+
+  .td-align-items-center-800 {
+    align-items: center;
+  }
+
+  .td-align-items-end-800 {
+    align-items: flex-end;
+  }
+
+  .td-justify-content-start-800 {
+    justify-content: start;
+  }
+
+  .td-justify-content-center-800 {
+    justify-content: center;
+  }
+
+  .td-justify-content-between-800 {
+    justify-content: space-between;
+  }
+
+  //PADDING all directions 10px
+  .td-padding-800-10px {
+    padding: 10px;
+  }
+
+  //PADDING by side 10px
+  .td-padding-l-800-10px {
+    padding-left: 10px;
+  }
+
+  .td-padding-r-800-10px {
+    padding-right: 10px;
+  }
+
+  .td-padding-t-800-10px {
+    padding-top: 10px;
+  }
+
+  .td-padding-b-800-10px {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .td-flex-wrap-1200 {
+    flex-wrap: wrap;
+  }
+
+  .td-align-items-start-1200 {
+    align-items: flex-start;
+  }
+
+  .td-align-items-center-1200 {
+    align-items: center;
+  }
+
+  .td-align-items-end-1200 {
+    align-items: flex-end;
+  }
+
+  .td-justify-content-start-1200 {
+    justify-content: start;
+  }
+
+  .td-justify-content-center-1200 {
+    justify-content: center;
+  }
+
+  .td-justify-content-between-1200 {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 801px) {
+
+  //PADDING IN ALL DIRECTIONS
+  .td-padding-min-800-10px {
+    padding: 10px;
+  }
+
+  .td-padding-min-800-15px {
+    padding: 15px;
+  }
+
+  .td-padding-min-800-20px {
+    padding: 20px;
+  }
+
+  .td-padding-min-800-30px {
+    padding: 30px;
+  }
+
+  //PADDING by side 10px
+  .td-padding-l-min-800-10px {
+    padding-left: 10px;
+  }
+
+  .td-padding-r-min-800-10px {
+    padding-right: 10px;
+  }
+
+  .td-padding-t-min-800-10px {
+    padding-top: 10px;
+  }
+
+  .td-padding-b-min-800-10px {
+    padding-bottom: 10px;
+  }
+
+  //PADDING by side 30px
+  .td-padding-l-min-800-30px {
+    padding-left: 30px;
+  }
+
+  .td-padding-r-min-800-30px {
+    padding-right: 30px;
+  }
+
+  .td-padding-t-min-800-30px {
+    padding-top: 30px;
+  }
+
+  .td-padding-b-min-800-30px {
+    padding-bottom: 30px;
+  }
+
+  .td-flex-wrap-min-800 {
+    flex-wrap: wrap;
+  }
+
+  //FLEX utilities
+
+  .td-align-items-start-min-800 {
+    align-items: flex-start;
+  }
+
+  .td-align-items-center-min-800 {
+    align-items: center;
+  }
+
+  .td-align-items-end-min-800 {
+    align-items: flex-end;
+  }
+
+  .td-justify-content-start-min-800 {
+    justify-content: start;
+  }
+
+  .td-justify-content-center-min-800 {
+    justify-content: center;
+  }
+
+  .td-justify-content-between-min-800 {
+    justify-content: space-between;
+  }
+}
