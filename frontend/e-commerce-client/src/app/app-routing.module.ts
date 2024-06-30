@@ -20,7 +20,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'checkout',
+        path: '',
         loadChildren: () =>
           import('./modules/checkout/checkout.module').then(
             (m) => m.CheckoutModule
