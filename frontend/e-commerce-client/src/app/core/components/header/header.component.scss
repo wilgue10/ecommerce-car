@@ -1,11 +1,12 @@
 .td-title{
     font-family:Georgia;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-right: 40px;
     margin-top: 10px;
-
+}
+.td-button-responsive{
+    display: flex;
 }
 
 .td-title:hover{
@@ -31,8 +32,8 @@
 }
 
 .td-container-header{
-    padding-top: 30px;
-    height: 80px;
+    padding: 40px;
+    height: 35px;
     background-color: hsl(25, 100%, 94%);
 }
 .td-car:hover{
@@ -56,10 +57,10 @@
     font-size: 27px;
     color:rgb(226, 147, 43);
 }
-.td-menu-icon{
-    color:rgb(226, 147, 43);
-    display: block;
-    margin-right: 100px;
-}
 
+.td-button-menu-icon{
+    font-weight: 600;
+    color:rgb(226, 147, 43);
+    
+}
   

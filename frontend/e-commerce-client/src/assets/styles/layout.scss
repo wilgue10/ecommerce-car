@@ -20,7 +20,7 @@
 .td-row-800 {
   display: flex;
   flex-direction: row;
-}
+  }
 
 //Will turn into column if width less than 480px
 .td-row-480 {
@@ -150,6 +150,7 @@
 
   .show-on-800 {
     display: block;
+    padding: 20px;
   }
 }
 

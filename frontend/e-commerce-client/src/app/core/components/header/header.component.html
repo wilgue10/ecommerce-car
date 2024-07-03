@@ -40,24 +40,37 @@
             </div>
         </div>
         <!-- END CAR AND PROFILE ICONS  -->
-
-
     </div>
+
     <!-- START REPONSIVE MENU -->
     <div class="show-on-800">
-        <button class="td-menu-icon" mat-icon-button [matMenuTriggerFor]="menu"
-            aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
-        <!-- MENU ITEMS  -->
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
-                    class="td-car-icon"></mat-icon>
-                <span>Item 1</span>
+        <div class="td-row td-justify-content-between">
+            <div class="td-title">
+                TIENDA
+            </div>
+            <div class="td-button-responsive">
+                <button class="td-justify-content-end" mat-icon-button [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu">
+                <mat-icon class="td-button-menu-icon">menu</mat-icon>
             </button>
+            
+            </div>
+            <!-- MENU ITEMS  -->
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
+                        class="td-car-icon"></mat-icon>
+                    <span>Item 1</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="exit_to_app"
+                        class="td-car-icon"></mat-icon>
+                    <span>Cerrar Sesión</span>
+                </button>
+                
 
-        </mat-menu>
+            </mat-menu>
+        </div>
     </div>
     <!-- END REPONSIVE MENU -->
 
