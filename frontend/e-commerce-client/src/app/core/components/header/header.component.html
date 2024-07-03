@@ -1,42 +1,64 @@
 <header>
-    <div class="td-row td-container-header">
+    <div class="td-row td-container-header hidden-on-mobile">
+
         <div class="td-cell-80">
-            <div class="td-row gap-30">
+            <div class="td-row gap-30 td-items">
                 <div class="td-title">
-                    Sneakes
+                    TIENDA
                 </div>
                 <div class="td-row td-items gap-10">
                     <div class="td-item">
-                        Sneakes
+                        Item 1
                     </div>
                     <div class="td-item">
-                        Sneakes
+                        Item 2
                     </div>
                     <div class="td-item">
-                        Sneakes
+                        Item 3
                     </div>
                     <div class="td-item">
-                        Sneakes
+                        Nosotros
                     </div>
                     <div class="td-item">
-                        Sneakes
+                        Contáctanos
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
 
         <!-- START CAR AND PROFILE ICONS  -->
         <div class="td-cell-20 ">
-            <div class="td-row gap-30">
+            <div class="td-row gap-30 td-justify-content-end">
                 <div class="td-car">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
+                        class="td-car-icon"></mat-icon>
                 </div>
                 <div class="td-profile">
-                    <mat-icon aria-hidden="false" aria-label="Example account_circle icon" fontIcon="account_circle"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Example account_circle icon" fontIcon="account_circle"
+                        class="td-profile-icon"></mat-icon>
                 </div>
             </div>
         </div>
+        <!-- END CAR AND PROFILE ICONS  -->
+
 
     </div>
+    <!-- START REPONSIVE MENU -->
+    <div class="show-on-800">
+        <button class="td-menu-icon" mat-icon-button [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <!-- MENU ITEMS  -->
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
+                    class="td-car-icon"></mat-icon>
+                <span>Item 1</span>
+            </button>
+
+        </mat-menu>
+    </div>
+    <!-- END REPONSIVE MENU -->
 
 </header>

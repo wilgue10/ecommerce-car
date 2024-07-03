@@ -1,20 +1,65 @@
 .td-title{
+    font-family:Georgia;
     font-size: 30px;
     font-weight: 700;
     margin-left: 30px;
+    margin-right: 20px;
     margin-top: 10px;
 
 }
 
+.td-title:hover{
+    color:rgb(226, 147, 43);
+}
+
+.td-items{
+    height: 100%;
+}
 .td-item{
+    font-family:Georgia; // puse otra xq no hay la Kumbh Sans que es la que esta en el readme
     font-weight: 400;
-    margin-left: 30px;
     margin-right: 30px;
     margin-top: 10px;
+    border-bottom: 20px;
+}
 
+.td-item:hover{
+    color: rgb(12, 56, 77);
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 3px solid hsl(26, 100%, 55%);
 }
 
 .td-container-header{
+    padding-top: 30px;
     height: 80px;
-   align-items: center;
+    background-color: hsl(25, 100%, 94%);
 }
+.td-car:hover{
+    cursor: pointer;   
+}
+
+.td-car-icon{
+    font-size: 22px;
+}
+
+.td-car-icon:hover{
+    font-size: 27px;
+    color:rgb(226, 147, 43);
+}
+
+.td-profile-icon{
+    font-size: 22px;
+}
+
+.td-profile-icon:hover{
+    font-size: 27px;
+    color:rgb(226, 147, 43);
+}
+.td-menu-icon{
+    color:rgb(226, 147, 43);
+    display: block;
+    margin-right: 100px;
+}
+
+  
