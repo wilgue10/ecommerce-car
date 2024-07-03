@@ -1,0 +1,76 @@
+.td-color-primary {
+    color: hsl(26, 100%, 55%);
+}
+
+.td-color-secundary {
+    color: hsl(25, 100%, 94%);
+}
+
+.td-color-white {
+    color: hsl(0, 0%, 100%) !important;
+}
+
+.td-color-very-dark-blue {
+    color: hsl(220, 13%, 13%) !important;
+}
+
+.td-color-dark-gravish-blue {
+    color: hsl(219, 9%, 45%) !important;
+}
+
+.td-color-gravish-blue {
+    color: hsl(220, 14%, 75%) !important;
+}
+
+.td-color-black {
+    color: hsl(0, 0%, 0%);
+}
+
+.td-color-fail {
+    color: var(--td-warn-color-500);
+}
+
+.td-color-grey-100 {
+    color: var(--td-gray-100);
+}
+
+.td-color-grey-200 {
+    color: var(--td-gray-200);
+}
+
+.td-color-grey-300 {
+    color: var(--td-gray-300);
+}
+
+.td-color-grey-400 {
+    color: var(--td-gray-400);
+}
+
+.td-color-grey-500 {
+    color: var(--td-gray-500);
+}
+
+.td-color-grey-600 {
+    color: var(--td-gray-600);
+}
+
+.td-color-grey-700 {
+    color: var(--td-gray-700);
+}
+
+.td-background-gray-100 {
+    background-color: var(--td-gray-100);
+}
+
+.td-background-secundary {
+    background-color: #ECEAEA;
+}
+
+.td-background-primary {
+    background-color: #F6F6F6;
+}
+
+
+.td-background-white {
+    background-color: white;
+}
