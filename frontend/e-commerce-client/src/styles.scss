@@ -2,5 +2,10 @@
 @import './assets/styles/_theming.scss';
 @import './assets/styles/colors.scss';
 @import './assets/styles/layout.scss';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "DM Sans";
+}
