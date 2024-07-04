@@ -1,5 +1,8 @@
+@import './../../../../assets/styles/theming.scss';
+
+
 .td-title{
-    font-family:Georgia;
+    cursor: pointer;
     font-size: 40px;
     font-weight: 700;
     margin-right: 40px;
@@ -10,18 +13,16 @@
 }
 
 .td-title:hover{
-    color:rgb(226, 147, 43);
+    color:var(--td-primary-color);
 }
 
 .td-items{
     height: 100%;
 }
 .td-item{
-    font-family:Georgia; // puse otra xq no hay la Kumbh Sans que es la que esta en el readme
     font-weight: 400;
     margin-right: 30px;
     margin-top: 10px;
-    border-bottom: 20px;
 }
 
 .td-item:hover{
