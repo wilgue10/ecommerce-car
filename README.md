@@ -1,1 +1,1 @@
-It is a test
+It is a personal e-commerce product that includes a list of products
