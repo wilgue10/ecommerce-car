@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AngularMaterialModuleModule } from './angular-material-module/angular-material-module.module';
 import { LayoutsModule } from './layouts/layouts.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment.development';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { LayoutsModule } from './layouts/layouts.module';
     BrowserModule,
     AppRoutingModule,
     AngularMaterialModuleModule,
-    LayoutsModule
+    LayoutsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [
     provideClientHydration(),
