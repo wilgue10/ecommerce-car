@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './layouts/auth/auth.component';
 import { MainComponent } from './layouts/main/main.component';
+import { AuthGuard } from './shared/services/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
           import('./modules/login/login.module').then((m) => m.LoginModule),
       },
     ],
+
   },
   {
     path: 'checkout',
@@ -26,12 +28,15 @@ const routes: Routes = [
             (m) => m.CheckoutModule
           ),
       },
+
     ],
+
   },
+  { path: '', redirectTo: 'checkout', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -12,6 +12,5 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-   const user =  this._auth.login('support@gmail.com', '12345678');  
   }
 }

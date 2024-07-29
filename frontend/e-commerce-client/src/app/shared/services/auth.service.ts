@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import firebase from '@firebase/app-compat'
+import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,6 +27,9 @@ export class AuthService {
       console.log("No se ha podido hacer el log-in correctamente. Error: " + error);
       return
     }
+  }
+  isAuthenticated() {
+    return this._auth.authState.pipe(map(user => user != null));
   }
 
 }
