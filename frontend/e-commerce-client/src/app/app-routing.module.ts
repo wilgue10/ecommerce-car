@@ -30,6 +30,7 @@ const routes: Routes = [
       },
 
     ],
+    canActivate: [AuthGuard]
 
   },
   { path: '', redirectTo: 'checkout', pathMatch: 'full' },

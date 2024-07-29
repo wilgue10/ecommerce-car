@@ -8,7 +8,7 @@ const checkoutRoutes: Route[] = [
   {
       path     : '',
       component: CheckoutComponent,
-      canActivate: [AuthGuard]
+      
   }
 ];
 

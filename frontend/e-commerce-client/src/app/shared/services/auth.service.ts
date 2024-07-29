@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   async login(email: string, password: string) {
-    console.log("1111");
+debugger
     try {
       return await this._auth.signInWithEmailAndPassword(email, password);
     } catch (error) {
