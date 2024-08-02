@@ -8,7 +8,7 @@
                     </div>
                     <div class="td-row td-items gap-10">
                         <div class="td-item" *ngFor="let item of items">
-                            {{item}}
+                            {{item.label}}
                         </div>
                     </div>
                 </div>
@@ -46,11 +46,18 @@
             </div>
             <!-- MENU ITEMS  -->
             <mat-menu #menu="matMenu">
-                <button mat-menu-item *ngFor="let item of items">
+                <button mat-menu-item>
                     <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
-                        class="td-car-icon" [ngClass]="item.icon" ></mat-icon>
-                    <span>{{item.label}}</span>
+                        class="td-car-icon"></mat-icon>
+                    <span>Item 1</span>
                 </button>
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="exit_to_app"
+                        class="td-car-icon"></mat-icon>
+                    <span>Cerrar Sesión</span>
+                </button>
+                
+
             </mat-menu>
         </div>
     </div>
