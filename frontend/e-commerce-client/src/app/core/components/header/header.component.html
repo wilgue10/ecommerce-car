@@ -7,20 +7,8 @@
                         TIENDA
                     </div>
                     <div class="td-row td-items gap-10">
-                        <div class="td-item">
-                            Item 1
-                        </div>
-                        <div class="td-item">
-                            Item 2
-                        </div>
-                        <div class="td-item">
-                            Item 3
-                        </div>
-                        <div class="td-item">
-                            Nosotros
-                        </div>
-                        <div class="td-item">
-                            Contáctanos
+                        <div class="td-item" *ngFor="let item of items">
+                            {{item}}
                         </div>
                     </div>
                 </div>
@@ -58,18 +46,11 @@
             </div>
             <!-- MENU ITEMS  -->
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>
+                <button mat-menu-item *ngFor="let item of items">
                     <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
-                        class="td-car-icon"></mat-icon>
-                    <span>Item 1</span>
+                        class="td-car-icon" [ngClass]="item.icon" ></mat-icon>
+                    <span>{{item.label}}</span>
                 </button>
-                <button mat-menu-item>
-                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="exit_to_app"
-                        class="td-car-icon"></mat-icon>
-                    <span>Cerrar Sesión</span>
-                </button>
-                
-
             </mat-menu>
         </div>
     </div>
