@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   items = [
-    { url: 'Item', label: 'Item 1', icon: 'add_shopping_cart' },
-    { url: 'Item', label: 'Item 2', icon: 'add_shopping_cart' },
-    { url: 'Item', label: 'Item 3', icon: 'add_shopping_cart' },
-    { url: 'Item', label: 'Item 4', icon: 'add_shopping_cart' },
-    { url: 'Item', label: 'Item 5', icon: 'add_shopping_cart' },
+    { url: 'Item', label: 'Shopping car', icon: 'add_shopping_cart' },
+    { url: 'Item', label: 'Favorites', icon: 'favorite' },
+    { url: 'Item', label: 'Settings', icon: 'settings' },
+    { url: 'Item', label: 'Logout', icon: 'exit_to_app' },
   ];
 }
