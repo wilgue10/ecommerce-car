@@ -1,4 +1,5 @@
 <header>
+    <!-- START NORMAL MENU -->
     <div class="td-row full-width hidden-on-mobile">
         <div class="td-container-header">
             <div class="td-cell-80">
@@ -13,13 +14,13 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- START CAR AND PROFILE ICONS  -->
             <div class="td-cell-20 ">
                 <div class="td-row gap-30 td-justify-content-end">
                     <div class="td-car">
-                        <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
-                            class="td-car-icon"></mat-icon>
+                        <mat-icon aria-hidden="false" aria-label="Example shopping cart icon"
+                            fontIcon="add_shopping_cart" class="td-car-icon"></mat-icon>
                     </div>
                     <div class="td-profile">
                         <mat-icon aria-hidden="false" aria-label="Example account_circle icon" fontIcon="account_circle"
@@ -30,6 +31,7 @@
             <!-- END CAR AND PROFILE ICONS  -->
         </div>
     </div>
+    <!-- END  NORMAL MENU -->
 
     <!-- START REPONSIVE MENU -->
     <div class="show-on-480">
@@ -39,24 +41,19 @@
             </div>
             <div class="td-button-responsive">
                 <button class="td-justify-content-end" mat-icon-button [matMenuTriggerFor]="menu"
-                aria-label="Example icon-button with a menu">
-                <mat-icon class="td-button-menu-icon">menu</mat-icon>
-            </button>
-            
+                    aria-label="Example icon-button with a menu">
+                    <mat-icon class="td-button-menu-icon">menu</mat-icon>
+                </button>
+
             </div>
             <!-- MENU ITEMS  -->
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>
-                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="add_shopping_cart"
-                        class="td-car-icon"></mat-icon>
-                    <span>Item 1</span>
+                <button mat-menu-item *ngFor="let item of items">
+                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="{{item.icon}}"
+                        class="td-car-icon">
+                    </mat-icon>
+                    <span>{{item.label}}</span>
                 </button>
-                <button mat-menu-item>
-                    <mat-icon aria-hidden="false" aria-label="Example shopping cart icon" fontIcon="exit_to_app"
-                        class="td-car-icon"></mat-icon>
-                    <span>Cerrar Sesión</span>
-                </button>
-                
 
             </mat-menu>
         </div>
