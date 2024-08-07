@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CheckoutComponent } from './checkout.component';
 import { Route, RouterModule } from '@angular/router';
 import { AuthGuard } from '../../shared/services/auth-guard.guard';
+import { ProductComponent } from './components/product/product.component';
+import { AngularMaterialModuleModule } from '../../angular-material-module/angular-material-module.module';
 
 const checkoutRoutes: Route[] = [
   {
@@ -14,11 +16,13 @@ const checkoutRoutes: Route[] = [
 
 @NgModule({
   declarations: [
-    CheckoutComponent
+    CheckoutComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(checkoutRoutes)
+    RouterModule.forChild(checkoutRoutes),
+    AngularMaterialModuleModule
   ]
 })
 export class CheckoutModule { }
